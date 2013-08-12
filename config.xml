@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.app.olivetree"
+        versionCode="1" 
+        version   = "1.0">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>OliveTree</name>
+
+    <description>
+	Application to enhance fellowship in RCCG, Olive Tree Parish.
+    </description>
+
+    <author href="http://www.rccgolivetree.org" email="info@rccgolivetree.org">
+        RCCG, Olive Tree Parish 
+    </author>
+
+
+
+<preference name="phonegap-version" value="2.9.0" />
+
+<preference name="orientation" value="portrait" />
+
+<preference name="fullscreen" value="false" />
+
+<preference name="exit-on-suspend" value="false" />
+
+<preference name="show-splash-screen-spinner" value="false" />
+
+<preference name="disable-cursor" value="false" />
+
+<preference name="android-minSdkVersion" value="8" />
+
+
+
+
+<icon src="icon.png"/>
+<icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+<icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+<icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+<icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+
+<icon src="icons/bb/icon.png" gap:platform="blackberry" />
+<icon src="icons/bb/icon_hover.png" gap:platform="blackberry" gap:state="hover"/>
+
+
+<gap:splash src="splash.png" />
+<gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+<gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+<gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+<gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+
+<gap:splash src="splash/bb/splash.png" gap:platform="blackberry" />
+
+
+
+
+
+
+<feature name="http://api.phonegap.com/1.0/network"/>
+
+<feature name="http://api.phonegap.com/1.0/file"/>
+
+<feature name="http://api.phonegap.com/1.0/notification"/>
+
+<feature name="http://api.phonegap.com/1.0/media"/>
+
+<feature name="http://api.phonegap.com/1.0/geolocation"/>
+
+<access origin="http://www.iamredeemed.me" />
+
+<access origin="http://www.iamredeemed.me" subdomains="true" />
+
+
+</widget>
