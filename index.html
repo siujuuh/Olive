@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MobileNigeria</title>
+    <title>RCCG, Olive Tree Parish</title>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/kendo.mobile.min.js"></script>
@@ -15,6 +15,45 @@
 <body>
 
 
+<!--------------------------------------
+########################################
+FIRST PAGE FOR REGISTRATION
+########################################
+---------------------------------------->
+
+
+
+<div data-role="view" id="firstpage" data-layout="start" data-title="Start Page" data-transition="none">
+
+	<div>
+	<p></p>
+	<center><img id="startimg" src="styles/images/sources/logo.png" /></center>
+	</div>
+	<br /><br /><br />
+    <span style="font-size: 0.9em; color: #333436; display: block; text-align: center;">Are you a first time user?</span>
+		<a id="startimg" style="background-color: #29186F;" data-role="button" href="#register" data-transition="overlay:up">Register</a>
+		
+	<br />
+    <span style="font-size: 0.9em; color: #333436; display: block; text-align: center;">Already Registered?</span>
+		<a id="startimg" style="background-color: #00cc00;" data-role="button" href="#login" data-transition="overlay:up">Login</a>
+
+	
+
+</div>
+
+			<script>
+			var switchInstance = $("#termsbtn").kendoMobileSwitch({ onLabel: 'YES', offLabel: 'NO' });
+			</script>
+
+<style scoped>
+
+#firstpage .km-content {
+		padding:0 20px 0 20px;
+		background:#eaeaea;
+		background: #eaeaea url('styles/images/sources/bg_pattern.png') repeat 0 0;
+}
+
+</style>
 
 
 <!--------------------------------------
@@ -25,47 +64,73 @@ START PAGE FOR REGISTRATION
 
 
 
-	<div data-role="view" id="startpage" data-layout="start" data-title="Start Page" data-init="initForm" data-transition="none">
-	<div>
-	<p></p>
-	<center><img id="startimg" src="styles/images/sources/logo-aboutus.png" /></center>
+	<div data-role="view" id="register" data-layout="start" data-title="Registration" data-init="initForm" data-transition="none">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+            <a data-align="left" data-role="backbutton">Close</a>
+        </div>
 	</div>
-	
+	<p></p>
+	<span style="font-size: 0.9em; color: #666; display: block; text-align: center;">Please fill the form appropriately.</span>
     <form action="./index.html">
         <ul data-role="listview" data-style="inset">
 			<li>
                 <label>
-				<span style="color:#0099cc;">First Name:</span>
+				<span style="color:#666666;">First Name: 	</span>
                     <input type="text" value="" />
                 </label>
             </li>
 			<li>
                 <label>
-				<span style="color:#0099cc;">Last Name:</span>
+				<span style="color:#666666;">Last Name:</span>
                     <input type="text" value="" />
                 </label>
             </li>
             <li>
                 <label>
-                    <span style="color:#0099cc;">Email:</span>
+                    <span style="color:#666666;">Email:</span>
                     <input type="email" value="" />
                 </label>
             </li>
-            
+			
             <li>
                 <label>
-                    <span style="color:#0099cc;">Phone:</span>
-                    <input type="tel" value="+234" />
+                    <span style="color:#666666;">Phone:</span>
+                    <input type="tel" value="" placeholder="" />
                 </label>
             </li>
+
+            <li>
+                <label>
+                    <span style="color:#666666;">Username:</span>
+                    <input type="text" value="" />
+                </label>
+            </li>
+			
+            <li>
+                <label>
+                    <span style="color:#666666;">Password:</span>
+                    <input type="password" value="" />
+                </label>
+            </li>
+
+            <li>
+                <label>
+                    <span style="color:#666666;">Confirm Password:</span>
+                    <input type="password" value="" />
+                </label>
+            </li>
+
+            
 			<li><label>
-			<a style="font-size:0.75em; background-color: #009900;" data-role="button" href="#termspage">Terms / Privacy</a>
+			<a style="font-size:0.75em; background-color: #29186F;" data-role="button" href="#termspage" data-transition="zoom:in">Terms / Privacy</a>
 			<input  data-role="switch" type="checkbox" id="termsbtn" />
 			</label>
 			</li>
             
         </ul>
-		<a id="startimg" style="background-color: #0099cc;" data-role="button" href="#news" data-transition="zoom:in">Start</a>
+		<a id="startimg" style="background-color: #00cc00;" data-role="button" href="#news" data-transition="zoom:in">Submit</a>
     </form>
 	
 
@@ -77,9 +142,10 @@ START PAGE FOR REGISTRATION
 
 <style scoped>
 
-#startpage .km-content {
+#register .km-content {
 		padding:0 20px 0 20px;
-		background:#0099cc;
+		background:#eaeaea;
+		background: #eaeaea url('styles/images/sources/bg_pattern.png') repeat 0 0;
 }
 
 #startimg {
@@ -92,6 +158,80 @@ text-align: center;
 
 
 
+
+<!--------------------------------------
+########################################
+LOGIN PAGE 
+########################################
+---------------------------------------->
+
+
+
+	<div data-role="view" id="login" data-layout="start" data-title="Member Login" data-init="initForm" data-transition="none">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+            <a data-align="left" data-role="backbutton">Close</a>
+        </div>
+	</div>
+	<p></p>
+	<span style="font-size: 0.9em; color: #666; display: block; text-align: center;">Use your registered username and password.</span>
+	
+	
+    <form action="./index.html">
+        <ul data-role="listview" data-style="inset">
+			<li>
+                <label>
+				<span style="color:#666666;">Username:</span>
+                    <input type="text" value="" />
+                </label>
+            </li>
+			<li>
+                <label>
+				<span style="color:#666666;">Password:</span>
+                    <input type="password" value="" />
+                </label>
+            </li>
+            
+			<li><label>
+			<span style="color:#666666;">Keep me signed in?</span>
+			<input  data-role="switch" type="checkbox" id="signedin" />
+			</label>
+			</li>
+            
+        </ul>
+		<a id="startimg" style="background-color: #00cc00;" data-role="button" href="#news" data-transition="zoom:in">Sign In</a>
+    </form>
+	
+
+</div>
+
+			<script>
+			var switchInstance = $("#signedin").kendoMobileSwitch({ onLabel: 'YES', offLabel: 'NO' });
+			</script>
+
+<style scoped>
+
+#login .km-content {
+		padding:0 20px 0 20px;
+		background:#eaeaea;
+		background: #eaeaea url('styles/images/sources/bg_pattern.png') repeat 0 0;
+}
+
+#startimg {
+display: block;
+text-align: center;
+        margin: .6em .8em 0;
+        font-size: 1.4em;
+}
+</style>
+
+
+
+
+
+
+
 <!--------------------------------------
 ########################################
 TERMS AND CONDITIONS PAGE
@@ -99,7 +239,7 @@ TERMS AND CONDITIONS PAGE
 ---------------------------------------->
 			
 
-<div data-role="view" id="termspage" data-transition="overlay:up">
+<div data-role="view" id="termspage" data-transition="">
     <div data-role="header">
         <div data-role="navbar">
             <span style="font-size:0.85em;">Terms / Privacy</span>
@@ -131,9 +271,9 @@ FIRST PAGE FOR NEWS
 	<div data-role="view" data-layout="overview-layout" id="news" data-init="mobileListViewHeadersInit" data-title="News">
 	<header data-role="header">
         <div data-role="navbar">
-            <a data-role="button" data-rel="drawer" href="#news-drawer" data-align="left">Channels</a>
+            <a data-role="button" data-rel="drawer" href="#news-drawer" data-align="left">Menu</a>
 			<span data-role="view-title"></span>
-			<a data-align="right"><img id="source-photo" src="styles/images/sources/mobilenigeria.png" /></a>
+			<a data-align="right"><img id="source-photo" src="styles/images/sources/favicon-logo.png" /></a>
 			
         </div>
     </header>
@@ -153,15 +293,15 @@ FIRST PAGE FOR NEWS
 
 <script>
     var groupedData = [
-        { name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "18 March 2013" },
-		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "10 March 2013" },
-		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "09 March 2013" },
-		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "09 March 2013" },
-		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "09 March 2013" },
-		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "08 March 2013" },
-		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "08 March 2013" },
-		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "07 March 2013" },
-		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "08 March 2013" }
+        { name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "styles/images/sources/pastor.png", time: "08:19", date: "18 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "styles/images/sources/pastor.png", time: "08:19", date: "10 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "styles/images/sources/pastor.png", time: "08:19", date: "09 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "styles/images/sources/pastor.png", time: "08:19", date: "09 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "styles/images/sources/pastor.png", time: "08:19", date: "09 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "styles/images/sources/pastor.png", time: "08:19", date: "08 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "styles/images/sources/pastor.png", time: "08:19", date: "08 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "styles/images/sources/pastor.png", time: "08:19", date: "07 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "styles/images/sources/pastor.png", time: "08:19", date: "08 March 2013" }
 
         
     ];
@@ -201,9 +341,9 @@ FIRST PAGE FOR NEWS
 }
 
 #source-photo {
-	max-height:32px;
-	max-width:32px;
-    padding-top: 4px;
+	max-height:36px;
+	max-width:36px;
+    padding-top: 2px;
     -webkit-box-shadow: none;
     box-shadow: none;
     -webkit-border-radius: none;
@@ -250,43 +390,31 @@ DRAWER FOR NEWS PAGE
 ########################################
 ---------------------------------------->
 
-<div data-role="drawer" id="news-drawer" style="width: 220px" data-title="Channels" data-views="['news']">
+<div data-role="drawer" id="news-drawer" style="width: 220px" data-title="Menu" data-views="['news']">
 <header data-role="header">
         <div data-role="navbar">
-            <span data-role="view-title"></span>
+            
         </div>
     </header>
-    <ul data-role="listview">
-                <li><a href="" data-transition="none" ><h2>MobileNigeria News</h2><img class="source-photo" src="styles/images/sources/mobilenigeria.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>Vanguard</h2><img class="source-photo" src="styles/images/sources/vanguard.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>Punch</h2><img class="source-photo" src="styles/images/sources/punch.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>The Nation</h2><img class="source-photo" src="styles/images/sources/thenation.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>LindaIkeji's Blog</h2><img class="source-photo" src="styles/images/sources/lindaikeji.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>The Sun</h2><img class="source-photo" src="styles/images/sources/thesun.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>TVC News</h2><img class="source-photo" src="styles/images/sources/tvc.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>TheNETng</h2><img class="source-photo" src="styles/images/sources/thenetng.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>360Nobs</h2><img class="source-photo" src="styles/images/sources/360nobs.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>Naij News</h2><img class="source-photo" src="styles/images/sources/naij.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>ChannelsTV News</h2><img class="source-photo" src="styles/images/sources/channelstv.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>CNN Africa</h2><img class="source-photo" src="styles/images/sources/cnn.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>BBC</h2><img class="source-photo" src="styles/images/sources/bbc.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>Premium Times</h2><img class="source-photo" src="styles/images/sources/premiumtimes.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>InfoNigeria</h2><img class="source-photo" src="styles/images/sources/infomationnigeria.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>Leadership</h2><img class="source-photo" src="styles/images/sources/leadership.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>DailyPost</h2><img class="source-photo" src="styles/images/sources/dailypost.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>PM News</h2><img class="source-photo" src="styles/images/sources/pmnews.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>Complete Sports</h2><img class="source-photo" src="styles/images/sources/completesports.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>Goal.com</h2><img class="source-photo" src="styles/images/sources/goal.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>TechCruch</h2><img class="source-photo" src="styles/images/sources/techcrunch.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>Techloy</h2><img class="source-photo" src="styles/images/sources/techloy.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>OTEKBITS</h2><img class="source-photo" src="styles/images/sources/otekbits.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>LadunLaidi's Blog</h2><img class="source-photo" src="styles/images/sources/ladunlaidi.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>Ogbonge Blog</h2><img class="source-photo" src="styles/images/sources/ogbongeblog.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>Y! Naija</h2><img class="source-photo" src="styles/images/sources/ynaija.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>Sahara Reporters</h2><img class="source-photo" src="styles/images/sources/saharareporters.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>The Guardian</h2><img class="source-photo" src="styles/images/sources/guardiannews.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>BellaNaija</h2><img class="source-photo" src="styles/images/sources/bellanaija.png" /></a></li>
-				<li><a href="" data-transition="none"><h2>IamRedeemed Blog</h2><img class="source-photo" src="styles/images/sources/iamredeemed.png" /></a></li>
+    <ul data-role="listview" data-type="group">
+		<li>Church Menu
+			<ul>
+                <li><a href="" data-transition="none" ><h2>Information Desk</h2><img class="source-photo" src="styles/images/sources/favicon-logo.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Testimonies</h2><img class="source-photo" src="styles/images/sources/testimony.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Prayer Requests</h2><img class="source-photo" src="styles/images/sources/prayer.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Pastor's Message</h2><img class="source-photo" src="styles/images/sources/pastor.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Discussions</h2><img class="source-photo" src="styles/images/sources/discussion.png" /></a></li>
+			</ul>
+		</li>
+		
+		<li>Options & Settings
+			<ul>
+                <li><a href="" data-transition="none" ><h2>About Olive Tree</h2><img class="source-photo" src="styles/images/sources/about.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Facebook Page</h2><img class="source-photo" src="styles/images/sources/facebook.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Settings</h2><img class="source-photo" src="styles/images/sources/settings.png" /></a></li>
+			</ul>
+		</li>
+	</ul>
 </div>
 
 
@@ -309,13 +437,13 @@ DRAWER FOR NEWS PAGE
         color: #fff;
     }
 	
-
 /*
+
 	#news-drawer .km-navbar, #right-drawer .km-navbar,
     .km-tablet .km-ios #news-drawer .km-view-title,
     .km-tablet .km-ios #right-drawer .km-view-title
     {
-	background-color: #2e2e2e;
+	background-color: #4e4e4e;
         color: #fff;
         text-shadow: 0 -1px rgba(0,0,0,.5);
     }
@@ -400,15 +528,17 @@ HOTLINES PAGE
         </div>
     </header>
     <ul data-role="listview" >
-				<li><a href=""><h2>GET A TAXI</h2><p>Lagos State Only</p><img class="hotline-photo" src="styles/images/taxi.png" /></a></li>
-                <li><a href=""><h2>EMERGENCY CALL</h2><p>Nationwide</p><img class="hotline-photo" src="styles/images/emergencynumber.png" /></a></li>
-				<li><a href=""><h2>DISTRESS CALL</h2><p>Lagos State Only</p><img class="hotline-photo" src="styles/images/distresscall.png" /></a></li>
-				<li><a href=""><h2>NEMA</h2><p>Nationwide</p><img class="hotline-photo" src="styles/images/nema.png" /></a></li>
-				<li><a href=""><h2>LASTMA</h2><p>Lagos State Only</p><img class="hotline-photo" src="styles/images/lastma.png" /></a></li>
-				<li><a href=""><h2>AA RESCUE</h2><p>Nationwide</p><img class="hotline-photo" src="styles/images/aarescue.png" /></a></li>
-				<li><a href=""><h2>EFAG</h2><p>Lagos State Only</p><img class="hotline-photo" src="styles/images/efag.png" /></a></li>
-				<li><a href=""><h2>SEHMU</h2><p>Lagos State Only</p><img class="hotline-photo" src="styles/images/sehmu.png" /></a></li>
-				<li><a href=""><h2>RAPID RESPONSE SQUAD</h2><p>Lagos State Only</p><img class="hotline-photo" src="styles/images/rrspolice.png" /></a></li>
+				<li><a href=""><h2>Prayer Line 1</h2><p>Lagos State Only</p><img class="hotline-photo" src="styles/images/sources/prayerline.png" /></a></li>
+				<li><a href=""><h2>Prayer Line 2</h2><p>Lagos State Only</p><img class="hotline-photo" src="styles/images/sources/prayerline.png" /></a></li>
+				<li><a href=""><h2>Prayer Line 3</h2><p>Lagos State Only</p><img class="hotline-photo" src="styles/images/sources/prayerline.png" /></a></li>
+				<li><a href=""><h2>Prayer Line 4</h2><p>Anywhere in Nigeria</p><img class="hotline-photo" src="styles/images/sources/prayerline.png" /></a></li>
+				<li><a href=""><h2>Prayer Line 5</h2><p>Anywhere in Nigeria</p><img class="hotline-photo" src="styles/images/sources/prayerline.png" /></a></li>
+				<li><a href=""><h2>Prayer Line 6</h2><p>Anywhere in Nigeria</p><img class="hotline-photo" src="styles/images/sources/prayerline.png" /></a></li>
+				<li><a href=""><h2>Prayer Line 7</h2><p>United Kingdom</p><img class="hotline-photo" src="styles/images/sources/prayerline.png" /></a></li>
+				<li><a href=""><h2>Prayer Line 8</h2><p>United States</p><img class="hotline-photo" src="styles/images/sources/prayerline.png" /></a></li>
+				<li><a href=""><h2>Prayer Line 9</h2><p>Canada</p><img class="hotline-photo" src="styles/images/sources/prayerline.png" /></a></li>
+				<li><a href=""><h2>Prayer Line 10</h2><p>World Wide</p><img class="hotline-photo" src="styles/images/sources/prayerline.png" /></a></li>
+                
 				
     </ul>
     
@@ -426,7 +556,7 @@ HOTLINES PAGE
     
     font-size: .7em;
 	font-weight: normal;
-	color:#0099cc;
+	color:#29186F;
 	line-height: 1.5em;
     margin: 0 0 0 60px;
 }
@@ -471,17 +601,22 @@ SETTINGS PAGE
 
 </div>
 
-		
+
+
+<!--------------------------------------
+########################################
+TABSTRIP
+########################################
+---------------------------------------->
 
 <div data-role="layout" data-id="overview-layout">
 
     <footer data-role="footer">
         <div data-role="tabstrip">
-            <a data-icon="icon-newspaper" href="#news" data-badge="23" data-transition="fade:in">News
-            </a><a data-icon="icon-info" href="#ishare" data-transition="fade:in">iShare
-            </a><a data-icon="icon-bookmark" href="#events" data-badge="New" data-transition="fade:in">Events
-			</a><a data-icon="icon-phone-3" href="#hotlines" data-transition="fade:in">Hotlines
-            </a><a data-icon="icon-cog" href="#appsettings" data-transition="fade:in">Settings</a>
+            <a data-icon="icon-home" href="#news" data-badge="23" data-transition="fade:in">Home
+            </a><a data-icon="icon-twitter" href="#ishare" data-transition="fade:in">@rccgolive
+            </a><a data-icon="icon-bookmark" href="#events" data-badge="New" data-transition="fade:in">Pastor Adeboye
+			</a><a data-icon="icon-phone-3" href="#hotlines" data-transition="fade:in">PrayerLines
         </div>
     </footer>
 </div>
