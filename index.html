@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MobileNigeria</title>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.mobile.min.js"></script>
+	<script src="js/console.js"></script>
+	<link href="styles/kendo.common.min.css" rel="stylesheet" />
+	<link href="styles/kendo.default.min.css" rel="stylesheet" />
+    <link href="styles/kendo.mobile.ios.min.css" rel="stylesheet" />
+	<link href="styles/styles.css" rel="stylesheet" />
+	
+</head>
+<body>
+
+
+
+
+<!--------------------------------------
+########################################
+START PAGE FOR REGISTRATION
+########################################
+---------------------------------------->
+
+
+
+	<div data-role="view" id="startpage" data-layout="start" data-title="Start Page" data-init="initForm" data-transition="none">
+	<div>
+	<p></p>
+	<center><img id="startimg" src="styles/images/sources/logo-aboutus.png" /></center>
+	</div>
+	
+    <form action="./index.html">
+        <ul data-role="listview" data-style="inset">
+			<li>
+                <label>
+				<span style="color:#0099cc;">First Name:</span>
+                    <input type="text" value="" />
+                </label>
+            </li>
+			<li>
+                <label>
+				<span style="color:#0099cc;">Last Name:</span>
+                    <input type="text" value="" />
+                </label>
+            </li>
+            <li>
+                <label>
+                    <span style="color:#0099cc;">Email:</span>
+                    <input type="email" value="" />
+                </label>
+            </li>
+            
+            <li>
+                <label>
+                    <span style="color:#0099cc;">Phone:</span>
+                    <input type="tel" value="+234" />
+                </label>
+            </li>
+			<li><label>
+			<a style="font-size:0.75em; background-color: #009900;" data-role="button" href="#termspage">Terms / Privacy</a>
+			<input  data-role="switch" type="checkbox" id="termsbtn" />
+			</label>
+			</li>
+            
+        </ul>
+		<a id="startimg" style="background-color: #0099cc;" data-role="button" href="#news" data-transition="zoom:in">Start</a>
+    </form>
+	
+
+</div>
+
+			<script>
+			var switchInstance = $("#termsbtn").kendoMobileSwitch({ onLabel: 'YES', offLabel: 'NO' });
+			</script>
+
+<style scoped>
+
+#startpage .km-content {
+		padding:0 20px 0 20px;
+		background:#0099cc;
+}
+
+#startimg {
+display: block;
+text-align: center;
+        margin: .6em .8em 0;
+        font-size: 1.4em;
+}
+</style>
+
+
+
+<!--------------------------------------
+########################################
+TERMS AND CONDITIONS PAGE
+########################################
+---------------------------------------->
+			
+
+<div data-role="view" id="termspage" data-transition="overlay:up">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span style="font-size:0.85em;">Terms / Privacy</span>
+            <a data-align="left" data-role="backbutton">Close</a>
+        </div>
+	</div>
+<h3>Terms & Conditions Agreement / Privacy Policy</h3>
+
+<p>
+This document lets stick to protecting your privacy and reserves our copyrights. It is particularly written to make sure users are not usurped and <strong>MobileNigeria's</strong> copyright assets are not infringed upon. Read more if you care about the jargon.
+</p>
+
+</div>
+
+
+
+
+
+
+
+<!--------------------------------------
+########################################
+FIRST PAGE FOR NEWS
+########################################
+---------------------------------------->
+
+
+
+	<div data-role="view" data-layout="overview-layout" id="news" data-init="mobileListViewHeadersInit" data-title="News">
+	<header data-role="header">
+        <div data-role="navbar">
+            <a data-role="button" data-rel="drawer" href="#news-drawer" data-align="left">Channels</a>
+			<span data-role="view-title"></span>
+			<a data-align="right"><img id="source-photo" src="styles/images/sources/mobilenigeria.png" /></a>
+			
+        </div>
+    </header>
+	
+	
+	<ul id="fixed-listview"></ul>
+    
+</div>
+
+<script type="text/x-kendo-template" id="listviewHeadersTemplate">
+    <a class="item-link" href="" >
+	<img class="item-photo" src="${url}" />
+    <h3 class="item-title">${name}</h3>
+    <p class="item-info">${author}</p>
+    </a>
+</script>
+
+<script>
+    var groupedData = [
+        { name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "18 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "10 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "09 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "09 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "09 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "08 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "08 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "07 March 2013" },
+		{ name: "Everything crashed in the newly elected election of the municipal convention - APC denies involvement and Tukur claims sabotage. Tinubu says all is politics", author: "10:23", url: "../../content/mobile/listview/sashimi-salad.jpg", time: "08:19", date: "08 March 2013" }
+
+        
+    ];
+
+    function mobileListViewHeadersInit() {
+        $("#fixed-listview").kendoMobileListView({
+            dataSource: kendo.data.DataSource.create({data: groupedData, group: { field: 'date', dir: 'desc'} }),
+            template: $("#listviewHeadersTemplate").html(),
+            headerTemplate: "${value}",
+            fixedHeaders: true,
+			pullToRefresh: true,
+			pullTemplate: "Pull to Update",
+			releaseTemplate: "Release to load"
+
+        });
+    }
+	
+	
+</script>
+
+<style scoped>
+.item-link {
+    height: auto;
+    float: right;
+}
+
+
+.item-photo {
+    width: 4em;
+    height: 4em;
+    float: left;
+    margin: 0 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+#source-photo {
+	max-height:32px;
+	max-width:32px;
+    padding-top: 4px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: none;
+    border-radius: none;
+}
+
+
+
+#fixed-listview .item-title {
+	float: left;
+	font-size: .85em;
+    line-height: 1.4em;
+    margin: -4.75em 0 0 0;
+	padding:0 1em 0 70px;
+    width: auto;
+}
+#fixed-listview .item-info {
+	float: right;
+	font-weight:normal;
+	font-size: .75em;
+	line-height: .6em;
+    margin: 0 0 0 0;
+    
+}
+
+
+.details-link {
+    margin-top: -1.2em;
+    position: absolute;
+    right: 0.6em;
+    top: 50%;
+}
+.km-listview .km-list {
+    margin: 0;
+}
+
+
+</style>
+
+
+<!--------------------------------------
+########################################
+DRAWER FOR NEWS PAGE
+########################################
+---------------------------------------->
+
+<div data-role="drawer" id="news-drawer" style="width: 220px" data-title="Channels" data-views="['news']">
+<header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+    <ul data-role="listview">
+                <li><a href="" data-transition="none" ><h2>MobileNigeria News</h2><img class="source-photo" src="styles/images/sources/mobilenigeria.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Vanguard</h2><img class="source-photo" src="styles/images/sources/vanguard.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Punch</h2><img class="source-photo" src="styles/images/sources/punch.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>The Nation</h2><img class="source-photo" src="styles/images/sources/thenation.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>LindaIkeji's Blog</h2><img class="source-photo" src="styles/images/sources/lindaikeji.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>The Sun</h2><img class="source-photo" src="styles/images/sources/thesun.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>TVC News</h2><img class="source-photo" src="styles/images/sources/tvc.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>TheNETng</h2><img class="source-photo" src="styles/images/sources/thenetng.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>360Nobs</h2><img class="source-photo" src="styles/images/sources/360nobs.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Naij News</h2><img class="source-photo" src="styles/images/sources/naij.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>ChannelsTV News</h2><img class="source-photo" src="styles/images/sources/channelstv.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>CNN Africa</h2><img class="source-photo" src="styles/images/sources/cnn.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>BBC</h2><img class="source-photo" src="styles/images/sources/bbc.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Premium Times</h2><img class="source-photo" src="styles/images/sources/premiumtimes.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>InfoNigeria</h2><img class="source-photo" src="styles/images/sources/infomationnigeria.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Leadership</h2><img class="source-photo" src="styles/images/sources/leadership.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>DailyPost</h2><img class="source-photo" src="styles/images/sources/dailypost.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>PM News</h2><img class="source-photo" src="styles/images/sources/pmnews.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Complete Sports</h2><img class="source-photo" src="styles/images/sources/completesports.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Goal.com</h2><img class="source-photo" src="styles/images/sources/goal.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>TechCruch</h2><img class="source-photo" src="styles/images/sources/techcrunch.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Techloy</h2><img class="source-photo" src="styles/images/sources/techloy.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>OTEKBITS</h2><img class="source-photo" src="styles/images/sources/otekbits.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>LadunLaidi's Blog</h2><img class="source-photo" src="styles/images/sources/ladunlaidi.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Ogbonge Blog</h2><img class="source-photo" src="styles/images/sources/ogbongeblog.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Y! Naija</h2><img class="source-photo" src="styles/images/sources/ynaija.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>Sahara Reporters</h2><img class="source-photo" src="styles/images/sources/saharareporters.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>The Guardian</h2><img class="source-photo" src="styles/images/sources/guardiannews.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>BellaNaija</h2><img class="source-photo" src="styles/images/sources/bellanaija.png" /></a></li>
+				<li><a href="" data-transition="none"><h2>IamRedeemed Blog</h2><img class="source-photo" src="styles/images/sources/iamredeemed.png" /></a></li>
+</div>
+
+
+<style>
+
+
+    .km-ios #news-drawer .km-content, .km-android #news-drawer .km-content, .km-blackberry #news-drawer .km-content,
+    .km-ios #news-drawer .km-list > li, .km-android #news-drawer .km-list > li, .km-blackberry #news-drawer .km-list > li,
+    .km-ios #news-drawer .km-listview-link > .km-icon, .km-android #news-drawer .km-listview-link > .km-icon, .km-blackberry #news-drawer .km-listview-link > .km-icon,
+    .km-ios #news-drawer .km-list li > .km-icon, .km-android #news-drawer .km-list li > .km-icon, .km-blackberry #news-drawer .km-list li > .km-icon
+    {
+        background-color: #4e4e4e;
+        color: #fff;
+    }
+
+    .km-ios #news-drawer .km-group-title,
+    .km-blackberry #news-drawer .km-group-title
+    {
+        background-color: #6e6e6e;
+        color: #fff;
+    }
+	
+
+/*
+	#news-drawer .km-navbar, #right-drawer .km-navbar,
+    .km-tablet .km-ios #news-drawer .km-view-title,
+    .km-tablet .km-ios #right-drawer .km-view-title
+    {
+	background-color: #2e2e2e;
+        color: #fff;
+        text-shadow: 0 -1px rgba(0,0,0,.5);
+    }
+	
+*/
+	
+	#news-drawer h2 {
+    display: inline-block;
+	line-height: .3em;
+    font-size: .8em;
+    margin: 1em 0 .5em 10px;
+}
+	
+	
+	#news-drawer img, .source-photo {
+    float: left;
+    width: 2em;
+    height: 2em;
+    margin: 0 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+	.splogo {
+    margin: 0 0;
+}
+
+.km-flat #news-drawer img, .source-photo {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+	
+</style>
+
+
+
+<!--------------------------------------
+########################################
+iSHARE PAGE
+########################################
+---------------------------------------->
+
+
+<div data-role="view" data-layout="overview-layout" id="ishare" data-title="iShare">
+<header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+    
+</div>
+
+
+
+
+<div data-role="view" data-layout="overview-layout" id="events" data-init="mobileListViewHeadersInit" data-title="Trending Events">
+	<header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+	
+    
+</div>
+
+
+<!--------------------------------------
+########################################
+HOTLINES PAGE
+########################################
+---------------------------------------->
+
+
+<div data-role="view" data-layout="overview-layout" id="hotlines" data-title="Hotlines">
+<header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+    <ul data-role="listview" >
+				<li><a href=""><h2>GET A TAXI</h2><p>Lagos State Only</p><img class="hotline-photo" src="styles/images/taxi.png" /></a></li>
+                <li><a href=""><h2>EMERGENCY CALL</h2><p>Nationwide</p><img class="hotline-photo" src="styles/images/emergencynumber.png" /></a></li>
+				<li><a href=""><h2>DISTRESS CALL</h2><p>Lagos State Only</p><img class="hotline-photo" src="styles/images/distresscall.png" /></a></li>
+				<li><a href=""><h2>NEMA</h2><p>Nationwide</p><img class="hotline-photo" src="styles/images/nema.png" /></a></li>
+				<li><a href=""><h2>LASTMA</h2><p>Lagos State Only</p><img class="hotline-photo" src="styles/images/lastma.png" /></a></li>
+				<li><a href=""><h2>AA RESCUE</h2><p>Nationwide</p><img class="hotline-photo" src="styles/images/aarescue.png" /></a></li>
+				<li><a href=""><h2>EFAG</h2><p>Lagos State Only</p><img class="hotline-photo" src="styles/images/efag.png" /></a></li>
+				<li><a href=""><h2>SEHMU</h2><p>Lagos State Only</p><img class="hotline-photo" src="styles/images/sehmu.png" /></a></li>
+				<li><a href=""><h2>RAPID RESPONSE SQUAD</h2><p>Lagos State Only</p><img class="hotline-photo" src="styles/images/rrspolice.png" /></a></li>
+				
+    </ul>
+    
+</div>
+
+<style scoped>
+#hotlines h2 {
+    display: inline-block;
+	line-height: .3em;
+    font-size: 1em;
+    margin: 0 0 0 60px;
+}
+
+#hotlines p {
+    
+    font-size: .7em;
+	font-weight: normal;
+	color:#0099cc;
+	line-height: 1.5em;
+    margin: 0 0 0 60px;
+}
+
+#hotlines img, .hotline-photo {
+    float: left;
+    width: 3em;
+    height: 3em;
+    margin: -2.8em 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.km-flat #hotlines img, .hotline-photo {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+</style>
+
+
+
+
+
+<!--------------------------------------
+########################################
+SETTINGS PAGE
+########################################
+---------------------------------------->
+
+
+<div data-role="view" id="appsettings" data-layout="overview-layout" data-title=" Account Settings" data-init="initForm" data-use-native-scrolling="true">
+	
+	<header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+        </div>
+    </header>	
+
+</div>
+
+		
+
+<div data-role="layout" data-id="overview-layout">
+
+    <footer data-role="footer">
+        <div data-role="tabstrip">
+            <a data-icon="icon-newspaper" href="#news" data-badge="23" data-transition="fade:in">News
+            </a><a data-icon="icon-info" href="#ishare" data-transition="fade:in">iShare
+            </a><a data-icon="icon-bookmark" href="#events" data-badge="New" data-transition="fade:in">Events
+			</a><a data-icon="icon-phone-3" href="#hotlines" data-transition="fade:in">Hotlines
+            </a><a data-icon="icon-cog" href="#appsettings" data-transition="fade:in">Settings</a>
+        </div>
+    </footer>
+</div>
+
+<script>
+    function mobileAccountViewInit() {
+        var listviews = this.element.find("ul.km-listview");
+
+        $("#settings-view").kendoMobileButtonGroup({
+            select: function() {
+                listviews.hide()
+                         .eq(this.selectedIndex)
+                         .show();
+            },
+            index: 0
+        });
+    }
+</script>
+
+
+
+<style scoped>
+
+</style>
+
+
+<script>
+    var app = new kendo.mobile.Application(document.body);
+</script>
+</body>
+</html>
